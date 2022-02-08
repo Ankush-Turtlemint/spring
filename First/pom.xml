@@ -24,26 +24,32 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>5.2.3.RELEASE</version>
+      <version>5.3.15</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>5.2.3.RELEASE</version>
+      <version>5.3.15</version>
     </dependency>
 
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.2</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>ring-logger</groupId>
+      <artifactId>ring-logger</artifactId>
+      <version>1.1.1</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
@@ -92,4 +98,11 @@
       </plugins>
     </pluginManagement>
   </build>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <name>Clojars</name>
+      <url>https://repo.clojars.org/</url>
+    </repository>
+  </repositories>
 </project>

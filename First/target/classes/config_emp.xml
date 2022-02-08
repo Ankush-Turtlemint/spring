@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+    <!-- ******************************************************** Collection Type *******************************************************   -->
+
+    <bean class="example2_collections.emp" name="emp1">
+        <property name="phones">
+            <list>
+                <value>01</value>
+                <value>02</value>
+                <value>03</value>
+                <value>04</value>
+                <null> </null>
+            </list>
+        </property>
+        <property name="name">
+                <value>Ram</value>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Add1</value>
+                <value>Add2</value>
+                <value>Add3</value>
+                <value>Add4</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2 months"/>
+                <entry key="Python" value="1 months"/>
+                <entry key="c++" value="11 months"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
