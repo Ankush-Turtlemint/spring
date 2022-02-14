@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+    <!--  Used to activating all annotation  -->
+    <context:annotation-config />
+
+<!--  For autowiring name of class and bean should be same i.e "address"  if it is not same then it will return null value-->
+  <bean class="autoWiring.Address" name="address">
+      <property name="street" value="Alandi Road" />
+      <property name="city" value="pune" />
+  </bean>
+
+
+    <bean class="autoWiring.emp" name="emp1" autowire="byName"/>
+<!--  byType checks wheather any address type of bean is present or not, if present then it will pass,
+  if there are two bean of same type then autowire="buType" it will show error,
+  if you use use byName then it will check name of the bean and pass the value to the bean whose name is same as the class andd 2 bean with name will not work
+  if you use constructor then it will first check name then it will pass the value to the constructor-->
+</beans>
